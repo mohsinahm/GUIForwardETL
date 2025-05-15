@@ -1,5 +1,5 @@
 from flet import *
-from datetime import datetime; from os import getlogin
+from datetime import datetime
 import SYSConnectToServers as CS
 
 
@@ -10,7 +10,6 @@ class ETLMonitor(Container):
 
         self.ODS = CS.ConnectToODSServer()
         self.TimeStamp = datetime.now()
-        self.UserID = getlogin()
         self.Testing = ElevatedButton(text="Testing", bgcolor="#1f2128", color="#64DD17", scale=transform.Scale(0.8),data=False,
                     on_click=[])
         self.header =  Container(expand=True, height=60, bgcolor="#AD1457",border_radius=border_radius.only(top_left=15,top_right=15),
